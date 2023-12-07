@@ -110,7 +110,7 @@ Staff.delete = (hostId, staffId, result) => {
 
 Staff.login = (staffMember, result) => {
   sql.query(
-    `SELECT * FROM Staff WHERE email = "${staffMember.email}"`,
+    `SELECT * FROM Staff WHERE email = '${staffMember.email}'`,
     async (err, res) => {
       if (err) {
         result(err, null);

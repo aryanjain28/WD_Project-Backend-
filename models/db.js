@@ -15,7 +15,7 @@ var connection = mysql.createConnection({
 
 connection.connect((err) => {
   if (err) throw err;
-  console.log("MYSQL Connected! @ " + process.env.PORT);
+  console.log("MYSQL Connected! @ " + process.env.DB_PORT);
   connection.query(
     `CREATE DATABASE IF NOT EXISTS ${process.env.DB}`,
     function (err, result) {
